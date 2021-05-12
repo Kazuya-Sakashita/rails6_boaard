@@ -1,0 +1,12 @@
+<%= link_to '←戻る', community_path(@community) %>
+<h1>コメントする</h1>
+
+<%= form_with model: [@community, @comment] do |form| %>
+  <%= form.label :author_name %>
+  <%= form.text_field :author_name %>
+
+  <%= form.label :content %>
+  <%= form.text_area :content %>
+
+  <%= form.submit '投稿' %>
+<% end %>

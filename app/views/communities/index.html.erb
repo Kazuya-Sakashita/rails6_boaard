@@ -1,0 +1,11 @@
+<h1>掲示板</h1>
+
+<%= link_to 'コミュニティ作成', new_community_path %>
+
+<% @communities.each do |community| %>
+  <div>
+    <p><%= link_to community.title, community_path(community) %></p>
+    <p><%= community.created_at %></p>
+    <p><%= community.owner_name %></p>
+  </div>
+<% end %>
