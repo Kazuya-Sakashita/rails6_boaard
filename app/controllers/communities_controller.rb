@@ -18,7 +18,7 @@ class CommunitiesController < ApplicationController
 
   def show
     @community = Community.find(params[:id])
-    @comments = @community.comments
+    @comments = @community.comments.order(created_at: :desc) # 投稿日：降順で並び替え  
   end
 
   private

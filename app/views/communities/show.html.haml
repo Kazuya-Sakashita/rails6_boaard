@@ -1,0 +1,16 @@
+= link_to communities_path, class: 'btn btn-light mb-3' do
+  %i.fas.fa-arrow-left
+  戻る
+
+.container
+  %h1= t('.title', title: @community.title)
+  = link_to new_community_comment_path(@community), class: 'btn btn-primary' do
+    %i.fas.fa-comment
+    = t('.link_to_new_comment')
+
+  %ul.list-group.mt-4
+    - @comments.each do |comment|
+      %li.list-group-item
+        .fs-5= comment.author_name
+        .fs-6.mb-3= l(comment.created_at, format: :long)
+        .fs-6= simple_format(comment.content)

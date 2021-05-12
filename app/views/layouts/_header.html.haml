@@ -1,0 +1,14 @@
+%nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+  .container-fluid
+    = link_to root_path, class: 'navbar-brand' do
+      Rails6.1掲示板
+    %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-bs-target" => "#navbarSupportedContent", "data-bs-toggle" => "collapse", :type => "button"}
+      %span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
+      %ul.navbar-nav.me-auto.mb-2.mb-lg-0
+        %li.nav-item
+          = link_to root_path, class: 'nav-link' do
+            トップ
+        %li.nav-item
+          = link_to new_community_path, class: 'nav-link' do
+            コミュニティを作る

@@ -1,0 +1,17 @@
+ja:
+  activerecord:
+    models:
+      community: コミュニティ 
+      comment: コメント
+    attributes:
+        community:
+          id: ID
+          title: タイトル
+          owner_name: 作成者
+        comment:
+          id: ID
+          author_name: 投稿者
+          content: 内容
+  attributes:
+    created_at: 作成日
+    updated_at: 更新日
